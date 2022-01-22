@@ -9,26 +9,32 @@ namespace Health_System_v3._0
     class Player
     {
         public int maxHealth;
-        public int Health;
+        public int health;
 
         public int maxShield;
-        public int Shield;
+        public int shield;
 
         public int maxLives;
-        public int Lives;
+        public int lives;
 
         public int damage;
+
+        public int EXP;
+        public int Lvl;
 
         public Player()
         {
             maxHealth = 100;
-            Health = 100;
+            health = 100;
 
             maxShield = 100;
-            Shield = 100;
+            shield = 100;
 
             maxLives = 3;
-            Lives = 3;
+            lives = 3;
+
+            EXP = 0;
+            Lvl = 0;
         }
 
         public void TakeDamge()
@@ -47,6 +53,13 @@ namespace Health_System_v3._0
         }
 
         public void ShowHUD()
+        {
+
+        }
+
+        // extra mile
+
+        public void LevelUp()
         {
 
         }
