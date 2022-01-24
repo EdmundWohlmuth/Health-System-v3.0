@@ -6,20 +6,8 @@ using System.Threading.Tasks;
 
 namespace Health_System_v3._0
 {
-    class Player
+    class Player : GameCharacters
     {
-        Enemy enemy = new Enemy();
-
-        public int maxHealth;
-        public int health;
-
-        public const int maxShield = 100;
-        public int shield;
-
-        public const int maxLives = 3;
-        public int lives;
-
-        public int damage;
 
         public int EXP;
         public int Lvl;
@@ -35,23 +23,15 @@ namespace Health_System_v3._0
 
             lives = 3;
 
+            hasLives = true;
+
             EXP = 0;
             Lvl = 0;
         }
 
-        public void TakeDamge()
-        {
-            Console.WriteLine("Player Takes " + enemy.damage + " Damage!");
+        // extra mile
 
-            shield = enemy.damage - shield;
-        }
-
-        public void Heal()
-        {
-
-        }
-
-        public void RegenerateShield()
+        public void LevelUp()
         {
 
         }
@@ -63,13 +43,6 @@ namespace Health_System_v3._0
             Console.WriteLine("Shield: " + shield + "/" + maxShield);
             Console.WriteLine("Lives: " + lives + "/" + maxLives);
             Console.WriteLine("============");
-        }
-
-        // extra mile
-
-        public void LevelUp()
-        {
-
         }
 
     }

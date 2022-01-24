@@ -20,13 +20,7 @@ namespace Health_System_v3._0
 
         public void ErrorCheck()
         {
-            Debug.Assert(enemy.damage > 0);
-            Debug.Assert(player.damage > 0);
 
-            Debug.Assert(player.maxHealth > 0);
-            Debug.Assert(enemy.maxHealth > 0);
-
-            Debug.Assert(enemy.maxShield > 0);
         }
 
     }

@@ -17,7 +17,17 @@ namespace Health_System_v3._0
             // Run Error Check
             unit_Test.ErrorCheck();
 
-            player.ShowHUD();
+            while (player.hasLives)
+            {
+                player.ShowHUD();
+                player.TakeDamge(10);
+                player.Heal(5);
+                player.RegenerateShield(5);
+                enemy.TakeDamge(30);
+                enemy.Heal(5);
+                Console.ReadKey(true);
+            }
+            
 
             Console.ReadKey(true);
 
