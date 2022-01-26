@@ -19,18 +19,45 @@ namespace Health_System_v3._0
 
         public void TakeDamge(int damage)
         {
+            if(damage < 0)
+            {
+                damage = 0;
+                return;
+            }
+            if (damage == int.MaxValue || damage == int.MinValue)
+            {
+                return;
+            }
+
             shield -= damage;
             if (shield < 0)
             {
                 health += shield;
                 shield = 0;
+
+                if (health <= 0)
+                {
+                    lives--;
+                    shield = maxShield;
+                    health = maxHealth;                                     
+                }
             }
         }
 
         public void Heal(int healing)
         {
+            if (healing < 0)
+            {
+                healing = 0;
+                return;
+            }
+            if (healing == int.MaxValue || healing == int.MinValue)
+            {
+                return;
+            }
+
             health += healing;
-            if (health > 100)
+            if (health > maxHealth)
             {
                 health = maxHealth;
             }
@@ -38,6 +65,16 @@ namespace Health_System_v3._0
 
         public void RegenerateShield(int shieldGen)
         {
+            if (shieldGen < 0)
+            {
+                shieldGen = 0;
+                return;
+            }
+            if (shieldGen == int.MaxValue || shieldGen == int.MinValue)
+            {
+                return;
+            }
+
             shield += shieldGen;
             if (shield > maxShield)
             {

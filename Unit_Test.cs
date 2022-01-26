@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Diagnostics;
 
 namespace Health_System_v3._0
 {
@@ -20,7 +19,8 @@ namespace Health_System_v3._0
 
         public void ErrorCheck()
         {
-
+            enemy.UnitTest();
+            player.UnitTest();
         }
 
     }
