@@ -26,23 +26,18 @@ namespace Health_System_v3._0
             lives = 3;
 
             hasLives = true;
-
-            EXP = 0;
-            Lvl = 0;
         }
         public void ShowHUD()
         {
             Console.WriteLine("============");
+            Console.WriteLine("Player Stats:");
             Console.WriteLine("Health: " + health + "/" + maxHealth);
             Console.WriteLine("Shield: " + shield + "/" + maxShield);
             Console.WriteLine("Lives: " + lives + "/" + maxLives);
             Console.WriteLine("============");
-        }
-
-        // extra mile
-        public void LevelUp()
-        {
-
+            Console.WriteLine("");
+            Console.WriteLine("The Player... ");
+            Console.WriteLine("");
         }
 
         public void UnitTest()

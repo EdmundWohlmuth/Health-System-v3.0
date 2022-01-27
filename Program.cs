@@ -15,7 +15,7 @@ namespace Health_System_v3._0
             Unit_Test unit_Test = new Unit_Test();
 
             // Run Error Check
-            unit_Test.ErrorCheck();
+            unit_Test.RunUnitTest();
 
             while (player.hasLives)
             {
@@ -23,9 +23,13 @@ namespace Health_System_v3._0
                 player.TakeDamge(10);
                 player.Heal(5);
                 player.RegenerateShield(5);
+                Console.ReadKey(true);
+                Console.Clear();
+                enemy.ShowStats();
                 enemy.TakeDamge(30);
                 enemy.Heal(5);
                 Console.ReadKey(true);
+                Console.Clear();
             }
             
 

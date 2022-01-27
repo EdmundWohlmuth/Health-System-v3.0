@@ -19,6 +19,7 @@ namespace Health_System_v3._0
 
         public void TakeDamge(int damage)
         {
+            Console.WriteLine("Takes " + damage + " Damage");
             if(damage < 0)
             {
                 damage = 0;
@@ -46,6 +47,7 @@ namespace Health_System_v3._0
 
         public void Heal(int healing)
         {
+            Console.WriteLine("Heals " + healing + " Health");
             if (healing < 0)
             {
                 healing = 0;
@@ -65,6 +67,7 @@ namespace Health_System_v3._0
 
         public void RegenerateShield(int shieldGen)
         {
+            Console.WriteLine("Regenerates " + shieldGen + " Shield");
             if (shieldGen < 0)
             {
                 shieldGen = 0;

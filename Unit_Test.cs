@@ -12,15 +12,11 @@ namespace Health_System_v3._0
         Enemy enemy = new Enemy();
         Player player = new Player();
 
-        public Unit_Test()
-        {          
-
-        }
-
-        public void ErrorCheck()
+        public void RunUnitTest()
         {
             enemy.UnitTest();
             player.UnitTest();
+            Console.Clear();
         }
 
     }
